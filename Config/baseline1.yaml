@@ -1,0 +1,44 @@
+screen-width: 1024  # In pixels
+screen-height: 1024 # In pixels
+camera: {X: 0.0, Y: 0.0, Z: -1.}
+
+objects:
+  - type: Sphere
+    properties:
+      center: {X: 0.0, Y: 0.0, Z: 0.0}
+      material: {specular: 0.3, diffuse: 1., ambient: 0.0, shininess: 10.0, color: {R: 1.0, G: 0.0, B: 0.0}}
+      radius: 0.65
+  - type: Plane
+    properties:
+      normal: {X: 0.0, Y: -1.0, Z: 0.0}
+      offset: 1.0
+      material: {specular: 0.0, diffuse: 1.0, ambient: 0.0, shininess: 15.0, color: {R: 1.0, G: 1.0, B: 1.0}}
+
+lights:
+  - type: PointLight
+    properties:
+      pos: {X: 0.0, Y: -5.0, Z: -2.0}
+      ambient: 0.9
+      diffuse: 0.8
+      specular: 1.0
+      intensity: 0.8
+      color: {R: 1.0, G: 1.0, B: 1.0}
+      attenuation: 1.1
+  - type: DirectionalLight
+    properties:
+      pos: {X: 0.0, Y: 5.0, Z: 5.0}
+      light_dir: {X: 0.0, Y: -1.0, Z: -1.0}
+      ambient: 0.9
+      diffuse: 0.8
+      specular: 1.0
+      intensity: 0.3
+      color: {R: 1.0, G: 1.0, B: 1.0}
+  #- type: DirectionalLight
+  #  properties:
+  #    pos: {X: -6.0, Y: 0.0, Z: 3.0}
+  #    light_dir: {X: 2.0, Y: 0.0, Z: -1.0}
+  #    ambient: 0.2
+  #    diffuse: 0.8
+  #    specular: 0.4
+  #    intensity: 0.1
+  #    color: {R: 1.0, G: 1.0, B: 1.0}

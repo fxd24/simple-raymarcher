@@ -12,12 +12,12 @@
 
 void initiate_png_mode(std::shared_ptr<PixelBufferBase>& pixel_buffer,
                        std::shared_ptr<Screen<int>>& screen) {
-    std::cout << "\nPlease enter the location to where you want the scene to be drawn\nExample: To draw to a file named "
-            "scene.png type scene.png" << std::endl;
+    //std::cout << "\nPlease enter the location to where you want the scene to be drawn\nExample: To draw to a file named "
+    //        "scene.png type scene.png" << std::endl;
 
-    std::string src;
-    while (!(std::cin >> src))
-        ;
+    std::string src = "baseline.png";
+    //while (!(std::cin >> src))
+    //    ;
 
     pixel_buffer = std::make_shared<ImageBuffer>(screen, src);
 }
@@ -36,12 +36,12 @@ Application::Application() {
     m_scene =  std::make_shared<Scene>();
 
 #if defined(GLFW_FOUND) && defined(OPENGL_FOUND) && defined(PNG_FOUND)
-    std::cout << "\nWould you like to draw the scene to a window or an image?\n"
-              << "Type W for window or I for image" << std::endl;
+    //std::cout << "\nWould you like to draw the scene to a window or an image?\n"
+    //          << "Type W for window or I for image" << std::endl;
 
-    char response;
-    while (!(std::cin >> response))
-        ;
+    char response = 'I';
+    //while (!(std::cin >> response))
+    //    ;
 
     switch (response) {
         case 'W' : case 'w' :
